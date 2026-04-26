@@ -20,6 +20,7 @@ public class Feedback {
     @Column(nullable = false)
     private Integer rating;
 
+    @Column(name = "feedback_comment", length = 1000)
     private String comment;
 
     @ManyToOne

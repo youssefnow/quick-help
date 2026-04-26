@@ -12,7 +12,8 @@ const FeedbackModal = ({ requestId, providerId, providerName, onClose }) => {
     setLoading(true);
     try {
       await feedbackService.createFeedback({
-        helpRequestId: requestId,
+        requestId: requestId,
+        toUserId: providerId,
         rating,
         comment
       });
